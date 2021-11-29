@@ -22,9 +22,6 @@ nav {
 
 .btn {
     display: flex;
-    transition: all;
-    transition-timing-function: linear;
-    transition-duration: 100ms;
 }
 
 .btn:hover {
@@ -114,6 +111,9 @@ nav ul li {
 
 #vol:hover {
     color: rgb(138, 130, 119);
+    transition: all;
+    transition-timing-function: linear;
+    transition-duration: 100ms;
 }
 
 #volumeBar {
@@ -138,11 +138,17 @@ nav ul li {
 
 .btns:hover {
     color: rgb(138, 130, 119);
+    transition: all;
+    transition-timing-function: linear;
+    transition-duration: 100ms;
 }
 
 .icons i {
     cursor: pointer;
     padding: 0rem 0.125rem;
+    transition: all;
+    transition-timing-function: linear;
+    transition-duration: 100ms;
 }
 
 #mainProgressBar {
