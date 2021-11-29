@@ -76,7 +76,7 @@ nav ul li {
     width: 70vw;
     border-radius: 3rem;
     padding: 0.5rem;
-    background-image: url('/public/assets/bg.jpg');
+    background-image: url('public/assets/bg.jpg');
 }
 
 .Bottom {

@@ -1,6 +1,6 @@
 console.log("This is Musical")
 let songIndex = 0;
-let audioElement = new Audio('/public/songs/1.mp3');
+let audioElement = new Audio('public/songs/1.mp3');
 let mainPlay = document.getElementById('mainPlay');
 let previousBtn = document.getElementById('previous')
 let nextBtn = document.getElementById('next')
@@ -15,43 +15,43 @@ let volBar = document.getElementById('volumeBar');
 let volBtn = document.getElementById('vol');
 let songs = [{
         songName: "Believer - Imagine Dragons",
-        filePath: '/public/songs/1.mp3',
-        coverPath: "/public/covers/believer.jpg"
+        filePath: 'public/songs/1.mp3',
+        coverPath: "public/covers/believer.jpg"
     },
     {
         songName: "Believer - Cover By Tommee Profitt",
-        filePath: "/public/songs/2.mp3",
-        coverPath: "/public/covers/believer-tp.jpg"
+        filePath: "public/songs/2.mp3",
+        coverPath: "public/covers/believer-tp.jpg"
     },
     {
         songName: "Dream - Road Trip Remix",
-        filePath: "/public/songs/3.mp3",
-        coverPath: "/public/covers/dreamroadtrip.jpg"
+        filePath: "public/songs/3.mp3",
+        coverPath: "public/covers/dreamroadtrip.jpg"
     },
     {
         songName: "Unstoppable - TheScore",
-        filePath: "/public/songs/4.mp3",
-        coverPath: "/public/covers/unstoppable.jpg"
+        filePath: "public/songs/4.mp3",
+        coverPath: "public/covers/unstoppable.jpg"
     },
     {
         songName: "Stronger - TheScore",
-        filePath: "/public/songs/5.mp3",
-        coverPath: "/public/covers/stronger.jpg"
+        filePath: "public/songs/5.mp3",
+        coverPath: "public/covers/stronger.jpg"
     },
     {
         songName: "SpiderMan - Sam Raimi Theme",
-        filePath: "/public/songs/6.mp3",
-        coverPath: "/public/covers/spider-man.jpg"
+        filePath: "public/songs/6.mp3",
+        coverPath: "public/covers/spider-man.jpg"
     },
     {
         songName: "Warriors - Imagine Dragons",
-        filePath: "/public/songs/7.mp3",
-        coverPath: "/public/covers/warriors2016.jpg"
+        filePath: "public/songs/7.mp3",
+        coverPath: "public/covers/warriors2016.jpg"
     },
     {
         songName: "Warriors - 2WEI Cover",
-        filePath: "/public/songs/8.mp3",
-        coverPath: "/public/covers/warriors2wei.jpg"
+        filePath: "public/songs/8.mp3",
+        coverPath: "public/covers/warriors2wei.jpg"
     },
 ]
 
@@ -99,7 +99,7 @@ songItemPlaying.forEach((element) => {
         e.target.classList.add('fa-pause-circle');
         gif1.style.opacity = 1;
         gif2.style.opacity = 1;
-        audioElement.src = `/public/songs/${songIndex+1}.mp3`;
+        audioElement.src = `public/songs/${songIndex+1}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();
         mainPlay.classList.remove('fa-play-circle');
@@ -143,7 +143,7 @@ function previousSong() {
     } else {
         songIndex -= 1;
     }
-    audioElement.src = `/public/songs/${songIndex+1}.mp3`;
+    audioElement.src = `public/songs/${songIndex+1}.mp3`;
     mainSong1.innerText = songs[songIndex].songName;
     mainSong2.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -158,7 +158,7 @@ function nextSong() {
     } else {
         songIndex += 1;
     }
-    audioElement.src = `/public/songs/${songIndex+1}.mp3`;
+    audioElement.src = `public/songs/${songIndex+1}.mp3`;
     mainSong1.innerText = songs[songIndex].songName;
     mainSong2.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
