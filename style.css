@@ -22,6 +22,9 @@ nav {
 
 .btn {
     display: flex;
+    transition: all;
+    transition-timing-function: linear;
+    transition-duration: 100ms;
 }
 
 .btn:hover {
