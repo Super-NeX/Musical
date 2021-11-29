@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="public/assets/logo.png" alt="Musical" title="Music Player">
+                <span>Musical</span>
+            </li>
+            <li class="btn">HOME</li>
+            <li class="btn">ABOUT</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songsList">
+            <h1>Songs List</h1>
+            <div class="songContainer">
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">3:36
+                            <i id="0" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">4:35
+                            <i id="1" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">3:07
+                            <i id="2" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">3:10
+                            <i id="3" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">3:19
+                            <i id="4" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">4:13
+                            <i id="5" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">2:50
+                            <i id="6" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="songItemPlay">
+                    <span class="jSName"></span>
+                    <span>
+                        <span class="timeStamp">3:21
+                            <i id="7" class="far songItemPlay fa-play-circle"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="Bottom">
+        <input type="range" name="range" id="mainProgressBar" min="0" value="0" max="1000">
+        <div class="icons">
+            <i class="btns fas fa-2x fa-backward" id="previous"></i>
+            <i class="btns far fa-2x fa-play-circle" id="mainPlay"></i>
+            <i class="btns fas fa-2x fa-forward" id="next"></i>
+            <button id="vol" class="fas fa-2x fa-volume-up">
+                <input type="range" name="volume" id="volumeBar" min="0" value="25" max="100">
+            </button>
+        </div>
+        <div id="gif1" class="gifs">
+            <img class="gifPlay" src="/public/assets/play.gif">
+            <span class="sPname" id="mainSongPlaying1">Believer - Imagine Dragons</span>
+        </div>
+        <div id="gif2" class="gifs">
+            <span class="sPname" id="mainSongPlaying2">Believer - Imagine Dragons</span>
+            <img class="gifPlay" src="/public/assets/play.gif">
+        </div>
+        <script src="/src/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/b00be7ec8d.js" crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Fira+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Noto+Sans+Mono:wght@300&display=swap');
+
+body {
+    background-color: rgb(204, 204, 240);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: bold;
+}
+
+.btn {
+    display: flex;
+}
+
+.btn:hover {
+    border-radius: 1rem;
+    background-color: rgb(63, 17, 17);
+    cursor: pointer;
+}
+
+i.songItemPlay:hover {
+    color: black;
+}
+
+img.songItemPlay:hover {
+    border-radius: 0.25rem;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    height: 65px;
+    background-color: rgb(34, 2, 2);
+    color: aliceblue;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 50px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.brand span {
+    font-family: 'Andada Pro', serif;
+}
+
+.container {
+    min-height: 65vh;
+    background-color: rgb(4, 49, 47);
+    color: rgb(223, 199, 199);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 0.5rem auto;
+    width: 70vw;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    background-image: url('/public/assets/bg.jpg');
+}
+
+.Bottom {
+    position: fixed;
+    width: 100vw;
+    bottom: 0rem;
+    height: 6rem;
+    background-color: rgb(3, 17, 1);
+    color: rgb(255, 213, 184);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vol {
+    outline: none;
+    background: none;
+    border: none;
+    justify-content: center;
+    padding-left: 0.25rem;
+    color: rgb(255, 209, 183);
+}
+
+#vol:hover {
+    color: rgb(138, 130, 119);
+}
+
+#volumeBar {
+    transform: scale(0);
+    opacity: 0;
+    width: 5rem;
+    /* display: flex; */
+    justify-content: center;
+}
+
+#vol:hover #volumeBar {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 200ms ease-in-out;
+}
+
+.icons {
+    margin: 0.5rem 0;
+    display: flex;
+    color: rgb(255, 229, 189);
+}
+
+.btns:hover {
+    color: rgb(138, 130, 119);
+}
+
+.icons i {
+    cursor: pointer;
+    padding: 0rem 0.125rem;
+}
+
+#mainProgressBar {
+    width: 80vw;
+}
+
+.songItem {
+    height: 2.5rem;
+    display: flex;
+    background-color: rgb(255, 221, 189);
+    color: rgb(27, 27, 146);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    font-family: 'Ephesis', cursive;
+    font-weight: bolder;
+}
+
+.songsList {
+    margin: 0.75rem;
+}
+
+.songContainer {
+    margin-top: 1.25rem;
+}
+
+.songItem img {
+    width: 3.5rem;
+    border-radius: 1rem;
+    margin: 0px 0.25rem;
+}
+
+.timeStamp {
+    margin: 0rem 0.8rem;
+    cursor: pointer;
+}
+
+#gif1 {
+    left: 10vw;
+}
+
+#gif2 {
+    right: 10vw;
+}
+
+.gifs {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.jSName {
+    font-size: 1.2rem;
+}
+
+.gifPlay {
+    padding-top: 0.25rem;
+    border-radius: 0.5rem;
+    width: 2rem;
+}
+
+span.sPname {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 0.25rem;
+}
