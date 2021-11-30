@@ -271,3 +271,7 @@ span.sPname {
         font-size: 0.8rem;
     }
 }
+
+.pointer{
+    cursor: pointer;
+}
