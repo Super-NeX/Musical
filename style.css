@@ -261,7 +261,7 @@ span.sPname {
 @media (max-width:650px) {
     div.container {
         background-image: url('public/assets/bg2.jpg');
-        background-size: 90%;
+        
     }
 }
 
