@@ -6,12 +6,12 @@ body {
     background-color: rgb(204, 204, 240);
 }
 
-a{
+a {
     text-decoration: none;
     color: aliceblue;
 }
 
-*{
+* {
     margin: 0rem;
     padding: 0rem;
 }
@@ -85,7 +85,8 @@ nav ul li {
     min-height: 65vh;
     background-color: #00000c;
     color: rgb(231, 180, 180);
-    font-family: 'Recursive', sans-serif;;
+    font-family: 'Recursive', sans-serif;
+    ;
     display: flex;
     margin: 0.5rem auto;
     width: 70vw;
@@ -150,7 +151,7 @@ nav ul li {
     color: rgb(255, 229, 189);
 }
 
-.iconRow{
+.iconRow {
     display: flex;
     flex-direction: row;
 }
@@ -188,7 +189,7 @@ nav ul li {
     font-weight: bolder;
 }
 
-.songItem .jSName{
+.songItem .jSName {
     font-size: 1.5vw;
 }
 
@@ -246,26 +247,26 @@ span.sPname {
 }
 
 @media (min-width:1250px) {
-    .container{
+    .container {
         background-size: 100%;
     }
 }
 
-@media (max-width:900px){
-    span.sPname{
+@media (max-width:900px) {
+    span.sPname {
         transform: scale(0);
     }
 }
 
-@media (max-width:650px){
-    div.container{
+@media (max-width:650px) {
+    div.container {
         background-image: url('public/assets/bg2.jpg');
         background-size: 90%;
     }
 }
 
-@media (max-width:600px){
-    .songItem .jSName{
+@media (max-width:600px) {
+    .songItem .jSName {
         font-family: 'Dancing Script', cursive;
         font-size: 0.8rem;
     }
