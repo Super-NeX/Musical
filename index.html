@@ -7,8 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="description" content="This is a Music Website As a Clone Project for Spotify. Have Fun">
     <meta name="keywords" content="Musical, Spotify, Super NeX,">
-    <title>Musical</title>
+    <title>Musical - A Music Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -110,13 +111,21 @@
 
     <div class="Bottom">
         <input type="range" name="range" id="mainProgressBar" min="0" value="0" max="1000">
-        <div class="icons">
-            <i class="btns fas fa-2x fa-backward" id="previous"></i>
-            <i class="btns far fa-2x fa-play-circle" id="mainPlay"></i>
-            <i class="btns fas fa-2x fa-forward" id="next"></i>
-            <button id="vol" class="fas fa-2x fa-volume-up">
-                <input type="range" name="volume" id="volumeBar" min="0" value="25" max="100">
-            </button>
+        <div class="iconRow">
+            <div class="icons">
+                <i class="btns fas fa-2x fa-backward" id="previous"></i>
+            </div>
+            <div class="icons">
+                <i class="btns far fa-2x fa-play-circle" id="mainPlay"></i>
+            </div>
+            <div class="icons">
+                <i class="btns fas fa-2x fa-forward" id="next"></i>
+            </div>
+            <span class="icons">
+                <i id="vol" class="fas fa-2x fa-volume-up">
+                    <input type="range" name="volume" id="volumeBar" min="0" value="25" max="100">
+                </i>
+            </span>
         </div>
         <div id="gif1" class="gifs">
             <img class="gifPlay" src="public/assets/play.gif">

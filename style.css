@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Fira+Sans:wght@100;200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Recursive:wght@300&display=swap');
 
 body {
     background-color: rgb(204, 204, 240);
@@ -7,11 +8,12 @@ body {
 
 a{
     text-decoration: none;
+    color: aliceblue;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0rem;
+    padding: 0rem;
 }
 
 nav {
@@ -27,10 +29,16 @@ nav {
     border-radius: 1rem;
     background-color: rgb(63, 17, 17);
     cursor: pointer;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
 }
 
 i.songItemPlay:hover {
     color: black;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
 }
 
 img.songItemPlay:hover {
@@ -72,9 +80,9 @@ nav ul li {
 
 .container {
     min-height: 65vh;
-    background-color: rgb(4, 49, 47);
-    color: rgb(223, 199, 199);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #00000c;
+    color: rgb(231, 180, 180);
+    font-family: 'Recursive', sans-serif;;
     display: flex;
     margin: 0.5rem auto;
     width: 70vw;
@@ -89,7 +97,7 @@ nav ul li {
     bottom: 0rem;
     height: 6rem;
     background-color: rgb(3, 17, 1);
-    color: rgb(255, 213, 184);
+    color: rgb(235, 254, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,12 +114,15 @@ nav ul li {
 }
 
 #vol:hover {
-    color: rgb(138, 130, 119);
+    color: rgb(139, 125, 165);
 }
 
 #volumeBar {
     transform: scale(0);
     opacity: 0;
+    position: fixed;
+    margin-top: 0.5rem;
+    margin-left: 0.125rem;
     width: 5rem;
     /* display: flex; */
     justify-content: center;
@@ -125,12 +136,24 @@ nav ul li {
 
 .icons {
     margin: 0.5rem 0;
+    padding: 0rem 0.1rem;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: rgb(255, 229, 189);
 }
 
+.iconRow{
+    display: flex;
+    flex-direction: row;
+}
+
 .btns:hover {
-    color: rgb(138, 130, 119);
+    color: rgb(139, 125, 165);
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
 }
 
 .icons i {
@@ -146,13 +169,18 @@ nav ul li {
     height: 2.5rem;
     display: flex;
     background-color: rgb(255, 221, 189);
-    color: rgb(27, 27, 146);
+    color: rgb(5, 7, 129);
     justify-content: space-between;
     align-items: center;
+    font-size: 1.2vw;
     border-radius: 1rem;
     margin: 0.5rem 0;
     font-family: 'Ephesis', cursive;
     font-weight: bolder;
+}
+
+.songItem .jSName{
+    font-size: 1.5vw;
 }
 
 .songsList {
@@ -171,7 +199,6 @@ nav ul li {
 
 .timeStamp {
     margin: 0rem 0.8rem;
-    cursor: pointer;
 }
 
 #gif1 {
@@ -186,6 +213,10 @@ nav ul li {
     position: absolute;
     opacity: 0;
     transition: opacity 0.7s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .jSName {
@@ -201,6 +232,32 @@ nav ul li {
 span.sPname {
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 0.25rem;
+    font-family: 'Andada', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0rem 0.25rem;
+}
+
+@media (min-width:1250px) {
+    .container{
+        background-size: 100%;
+    }
+}
+
+@media (max-width:900px){
+    span.sPname{
+        transform: scale(0);
+    }
+}
+
+@media (max-width:650px){
+    div.container{
+        background-image: url('public/assets/bg2.jpg');
+        background-size: 90%;
+    }
+}
+
+@media (max-width:600px){
+    .songItem .jSName{
+        font-family: 'Dancing Script', cursive;
+        font-size: 0.8rem;
+    }
 }
