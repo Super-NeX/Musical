@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: rgb(204, 204, 240);
+    background: linear-gradient(rgba(193, 193, 240, 0.95), rgba(200, 209, 236, 0.95)), url('../../public/assets/play.gif');
 }
 
 a {
@@ -28,6 +28,12 @@ a {
     }
 }
 
+@media (max-width:1200px) {
+    #gif2 .sPname {
+        transform: scale(0);
+    }
+}
+
 @media (max-width:900px) {
     span.sPname {
         transform: scale(0);
@@ -41,12 +47,18 @@ a {
 }
 
 @media (max-width:600px) {
-    .songItem .jSName {
+    .songItem .jSName,
+    .timeStamp {
         font-family: 'Dancing Script', cursive;
         font-size: 0.8rem;
     }
-    #volumeBar {
-        margin-top: 0.5rem;
-        margin-left: 0.125rem;
+}
+
+@media (max-width:385px) {
+    #loop {
+        margin-left: 10px;
+    }
+    .iconRow {
+        padding-left: 3rem;
     }
 }

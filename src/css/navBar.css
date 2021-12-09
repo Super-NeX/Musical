@@ -3,6 +3,7 @@
 nav {
     font-family: 'Noto Sans Mono', monospace;
     font-weight: bold;
+    width: 100%;
 }
 
 .brand {
