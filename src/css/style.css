@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Fira+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Recursive:wght@300&display=swap');
+* {
+    margin: 0rem;
+    padding: 0rem;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+}
+
+body {
+    background-color: rgb(204, 204, 240);
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (min-width:1250px) {
+    .container {
+        background-size: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    span.sPname {
+        transform: scale(0);
+    }
+}
+
+@media (max-width:650px) {
+    div.container {
+        background-image: url('../../public/assets/bg2.jpg');
+    }
+}
+
+@media (max-width:600px) {
+    .songItem .jSName {
+        font-family: 'Dancing Script', cursive;
+        font-size: 0.8rem;
+    }
+    #volumeBar {
+        margin-top: 0.5rem;
+        margin-left: 0.125rem;
+    }
+}

@@ -1,9 +1,9 @@
 console.log("This is Musical")
 let songIndex = 0;
-let audioElement = new Audio('public/songs/1.mp3');
+let audioElement = new Audio('../../public/songs/1.mp3');
 let mainPlay = document.getElementById('mainPlay');
-let previousBtn = document.getElementById('previous')
-let nextBtn = document.getElementById('next')
+let previousBtn = document.getElementById('previous');
+let nextBtn = document.getElementById('next');
 let mainProgressBar = document.getElementById('mainProgressBar');
 let gif1 = document.getElementById('gif1');
 let gif2 = document.getElementById('gif2');
@@ -13,52 +13,56 @@ let mainSong1 = document.getElementById('mainSongPlaying1');
 let mainSong2 = document.getElementById('mainSongPlaying2');
 let volBar = document.getElementById('volumeBar');
 let volBtn = document.getElementById('vol');
+let loopBtn = document.getElementById('loop');
+let loopChk = document.getElementById('checkMark');
+
 let songs = [{
         songName: "Believer - Imagine Dragons",
-        filePath: 'public/songs/1.mp3',
-        coverPath: "public/covers/believer.jpg"
+        filePath: '../../public/songs/1.mp3',
+        coverPath: "../../public/covers/believer.jpg"
     },
     {
         songName: "Believer - Cover By Tommee Profitt",
-        filePath: "public/songs/2.mp3",
-        coverPath: "public/covers/believer-tp.jpg"
+        filePath: "../../public/songs/2.mp3",
+        coverPath: "../../public/covers/believer-tp.jpg"
     },
     {
         songName: "Dream - Road Trip Remix",
-        filePath: "public/songs/3.mp3",
-        coverPath: "public/covers/dreamroadtrip.jpg"
+        filePath: "../../public/songs/3.mp3",
+        coverPath: "../../public/covers/dreamroadtrip.jpg"
     },
     {
         songName: "Unstoppable - TheScore",
-        filePath: "public/songs/4.mp3",
-        coverPath: "public/covers/unstoppable.jpg"
+        filePath: "../../public/songs/4.mp3",
+        coverPath: "../../public/covers/unstoppable.jpg"
     },
     {
         songName: "Stronger - TheScore",
-        filePath: "public/songs/5.mp3",
-        coverPath: "public/covers/stronger.jpg"
+        filePath: "../../public/songs/5.mp3",
+        coverPath: "../../public/covers/stronger.jpg"
     },
     {
         songName: "SpiderMan - Sam Raimi Theme",
-        filePath: "public/songs/6.mp3",
-        coverPath: "public/covers/spider-man.jpg"
+        filePath: "../../public/songs/6.mp3",
+        coverPath: "../../public/covers/spider-man.jpg"
     },
     {
         songName: "Warriors - Imagine Dragons",
-        filePath: "public/songs/7.mp3",
-        coverPath: "public/covers/warriors2016.jpg"
+        filePath: "../../public/songs/7.mp3",
+        coverPath: "../../public/covers/warriors2016.jpg"
     },
     {
         songName: "Warriors - 2WEI Cover",
-        filePath: "public/songs/8.mp3",
-        coverPath: "public/covers/warriors2wei.jpg"
+        filePath: "../../public/songs/8.mp3",
+        coverPath: "../../public/covers/warriors2wei.jpg"
     },
 ];
 
-mainPlay.addEventListener('click', playBtn)
+mainPlay.addEventListener('click', playBtn);
 nextBtn.addEventListener('click', nextSong);
 previousBtn.addEventListener('click', previousSong);
 volBar.addEventListener('change', volChange);
+loopBtn.addEventListener('click', loopVid)
 songItemPlaying.forEach((element) => {
     element.addEventListener('click', makePlay);
 });
@@ -72,8 +76,11 @@ songItemName.forEach((element, i) => {
 audioElement.addEventListener('timeupdate', () => {
         progress = parseInt((audioElement.currentTime / audioElement.duration) * 1000);
         mainProgressBar.value = progress;
-        if (mainProgressBar.value == 1000) {
-            nextSong()
+        if (mainProgressBar.value == 1000 && loopChk.style.opacity == '1') {
+            mainProgressBar.value = 0;
+            playBtn();
+        } else if (mainProgressBar.value == 1000) {
+            nextSong();
         };
     }
 
@@ -82,14 +89,6 @@ mainProgressBar.addEventListener('change', () => {
     audioElement.currentTime = mainProgressBar.value * audioElement.duration / 1000;
 });
 
-const makeAllPlays = () => {
-    songItemPlaying.forEach((element) => {
-        element.classList.remove('fa-pause-circle');
-        element.classList.add('fa-play-circle');
-        gif1.style.opacity = 0;
-        gif2.style.opacity = 0;
-    });
-};
 
 
 function playBtn() {
@@ -117,52 +116,61 @@ function volChange() {
     } else {
         volBtn.classList.remove('fa-volume-down');
         volBtn.classList.add('fa-volume-up');
-
     };
 };
 
 function previousSong() {
     if (songIndex <= 0) {
-        songIndex = 9;
+        songIndex = 7;
     } else {
         songIndex -= 1;
     };
-    audioElement.src = `public/songs/${songIndex + 1}.mp3`;
-    mainSong1.innerText = songs[songIndex].songName;
-    mainSong2.innerText = songs[songIndex].songName;
-    audioElement.currentTime = 0;
-    audioElement.play();
-    mainPlay.classList.remove('fa-play-circle');
-    mainPlay.classList.add('fa-pause-circle');
+    manyThings();
 };
 
 function nextSong() {
-    if (songIndex >= 9) {
+    if (songIndex >= 7) {
         songIndex = 0;
     } else {
         songIndex += 1;
     };
-    audioElement.src = `public/songs/${songIndex + 1}.mp3`;
-    mainSong1.innerText = songs[songIndex].songName;
-    mainSong2.innerText = songs[songIndex].songName;
-    audioElement.currentTime = 0;
-    audioElement.play();
-    mainPlay.classList.remove('fa-play-circle');
-    mainPlay.classList.add('fa-pause-circle');
+    manyThings();
 }
 
 function makePlay(e) {
     makeAllPlays();
-    mainSong1.innerText = songs[songIndex].songName;
-    mainSong2.innerText = songs[songIndex].songName;
     songIndex = parseInt(e.target.id);
+    manyThings();
     e.target.classList.remove('fa-play-circle');
     e.target.classList.add('fa-pause-circle');
     gif1.style.opacity = 1;
     gif2.style.opacity = 1;
+}
+
+function loopVid() {
+    if (loopChk.style.opacity == '0') {
+        loopChk.style.opacity = '1';
+    } else {
+        loopChk.style.opacity = '0';
+    }
+}
+const manyThings = () => {
+    audioElement.src = `../../public/songs/${songIndex + 1}.mp3`;
+    mainSong1.innerText = songs[songIndex].songName;
+    mainSong2.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
-    audioElement.src = `public/songs/${songIndex + 1}.mp3`;
     audioElement.play();
+    gif1.style.opacity = 1;
+    gif2.style.opacity = 1;
     mainPlay.classList.remove('fa-play-circle');
     mainPlay.classList.add('fa-pause-circle');
 }
+
+const makeAllPlays = () => {
+    songItemPlaying.forEach((element) => {
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+        gif1.style.opacity = 0;
+        gif2.style.opacity = 0;
+    });
+};

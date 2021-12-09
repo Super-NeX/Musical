@@ -9,10 +9,11 @@
     <meta name="description" content="This is a Music Website As a Clone Project for Spotify. Have Fun">
     <meta name="keywords" content="Musical, Spotify, Super NeX,">
     <title>Musical - A Music Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/navBar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/mainBody.css">
+    <link rel="stylesheet" type="text/css" href="src/css/bottomBar.css">
     <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4059815250413848"
-        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
             <h1>Songs List</h1>
             <div class="songContainer">
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">3:36
@@ -44,7 +45,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">4:35
@@ -53,7 +54,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">3:07
@@ -62,7 +63,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">3:10
@@ -71,7 +72,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">3:19
@@ -80,7 +81,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">4:13
@@ -89,7 +90,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">2:50
@@ -98,7 +99,7 @@
                     </span>
                 </div>
                 <div class="songItem">
-                    <img class="songItemPlay">
+                    <img class="img">
                     <span class="jSName"></span>
                     <span>
                         <span class="timeStamp">3:21
@@ -107,28 +108,32 @@
                     </span>
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <div class="Bottom">
         <input type="range" name="range" id="mainProgressBar" min="0" value="0" max="1000">
         <div class="iconRow">
-            <div class="icons">
-                <i class="btns fas fa-2x fa-backward" id="previous"></i>
+            <div class="iconRow">
+                <div class="cent icons">
+                    <i class="btns fas fa-2x fa-backward" id="previous"></i>
+                </div>
+                <div class="cent icons">
+                    <i class="btns far fa-2x fa-play-circle" id="mainPlay"></i>
+                </div>
+                <div class="cent icons">
+                    <i class="btns fas fa-2x fa-forward" id="next"></i>
+                </div>
+                <span class="icons">
+                    <i id="vol" class="btns fas fa-2x fa-volume-up">
+                        <input type="range" name="volume" id="volumeBar" min="0" value="90" max="100">
+                    </i>
+                </span>
+                <span class="icons">
+                    <i id="loop" class="btns fas fa-2x fa-retweet"></i>
+                    <i id="checkMark" class="fas fa-check"></i>
+                </span>
             </div>
-            <div class="icons">
-                <i class="btns far fa-2x fa-play-circle" id="mainPlay"></i>
-            </div>
-            <div class="icons">
-                <i class="btns fas fa-2x fa-forward" id="next"></i>
-            </div>
-            <span class="icons">
-                <i id="vol" class="fas fa-2x fa-volume-up">
-                    <input type="range" name="volume" id="volumeBar" min="0" value="25" max="100">
-                </i>
-            </span>
         </div>
         <div id="gif1" class="gifs">
             <img class="gifPlay" src="public/assets/play.gif">
@@ -138,9 +143,8 @@
             <span class="sPname" id="mainSongPlaying2">Believer - Imagine Dragons</span>
             <img class="gifPlay" src="public/assets/play.gif">
         </div>
-        <script src="script.js"></script>
+        <script src="src/js/script.js"></script>
         <script src="https://kit.fontawesome.com/b00be7ec8d.js" crossorigin="anonymous"></script>
-
     </div>
 </body>
 
